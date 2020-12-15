@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Coco Animation</title>
+    <style>
+        body {
+            background-image: url("coco.jpg");
+            background-size: cover;
+            margin: 0;
+        }
+        video {
+            position: fixed;
+            top: 0px;
+            left: 400px;
+        }
+        #goto20sec {
+            position: fixed;
+            top: 50px;
+            left: 400px;
+        }
+    </style>
+</head>
+<body>
+<video id="myvideo" width="800" autoplay muted loop controls >
+    <source src="coco.mp4" >
+</video>
+<button id="goto20sec" >
+    Go to 20 sec.
+</button>
+<script>
+    v = document.getElementById("myvideo");
+    document.getElementById("goto20sec").addEventListener("click", function () {
+        v.currentTime = 20;
+    })
+
+</script>
+</body>
+</html>
