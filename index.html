@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <title>Coco Animation</title>
@@ -9,25 +9,76 @@
             background-size: cover;
             margin: 0;
         }
+        .video-wrapper {
+            position: relative;
+            height: 500px;
+        }
         video {
-            position: fixed;
+            position: absolute;
             top: 0px;
             left: 400px;
+            z-index: -1;
         }
         #goto20sec {
-            position: fixed;
-            top: 50px;
+            position: absolute;
+            top: 40px;
+            left: 400px;
+        }
+        h1 {
+            position: absolute;
+            color:white;
+            top: 0px;
+            left: 750px;
+        }
+        p {
+            color:white;
+        }
+        .container {
+            display: flex;
+            border: 4px solid steelblue;
+            padding: 5px;
+            margin: 20px;
+        }
+        audio {
+            position: absolute;
+            top: 0px;
             left: 400px;
         }
     </style>
 </head>
 <body>
+<h1> Coco</h1>
+<div class="video-wrapper">
 <video id="myvideo" width="800" autoplay muted loop controls >
     <source src="coco.mp4" >
 </video>
+</div>
 <button id="goto20sec" >
     Go to 20 sec.
 </button>
+<audio controls
+       <source src="rememberme.mp3">
+</audio>
+<div class="container">
+<p>
+    Coco is a 2017 American computer-animated fantasy film produced by Pixar Animation Studios and released by Walt Disney Pictures. Based on an original idea by Lee Unkrich, it is directed by him and co-directed by Adrian Molina. The film's voice cast stars Anthony Gonzalez, Gael García Bernal, Benjamin Bratt, Alanna Ubach, Renée Victor, Ana Ofelia Murguía and Edward James Olmos. The story follows a 12-year-old boy named Miguel who is accidentally transported to the Land of the Dead, where he seeks the help of his deceased musician great-great-grandfather to return him to his family among the living and to reverse his family's ban on music.
+</p>
+<p>
+    The concept for Coco is inspired by the Mexican holiday Day of the Dead. The film was scripted by Molina and Matthew Aldrich from a story by Unkrich, Jason Katz, Aldrich and Molina. Pixar began developing the animation in 2016; Unkrich and some of the film's crew visited Mexico for research. Composer Michael Giacchino, who had worked on prior Pixar animated features, composed the score. With a cost of $175 million, Coco is the first film with a nine-figure budget to feature an all-Latino principal cast.
+</p>
+<p>
+    Coco premiered on October 20, 2017, during the Morelia International Film Festival in Morelia, Mexico.[8] It was theatrically released in Mexico the following week, the weekend before Día de Muertos, and in the United States on November 22, 2017. The film was praised for its animation, voice acting, music, visuals, emotional story, and respect for Mexican culture. It grossed over $807 million worldwide, becoming the 16th highest-grossing animated film ever at the time of its release.[9][10][11][12] Recipient of several accolades, Coco was chosen by the National Board of Review as the Best Animated Film of 2017. The film won two Academy Awards for Best Animated Feature and Best Original Song ("Remember Me"). It also won Best Animated Film at the BAFTA Awards, Golden Globe Awards, Critic's Choice Movie Awards, and Annie Awards.[13]
+</p>
+</div>
+<p>
+    In Santa Cecilia, Mexico, Miguel dreams of becoming a musician, even though his family strictly forbids it. His great-great-grandmother Imelda was married to a man who left her and their daughter Coco to pursue a career in music, and when he never returned, Imelda discarded all forms of music from her family's life before starting a shoemaking business. Miguel now lives with the elderly Coco and their family, including Miguel's parents and grandmother, who are all shoemakers. Coco suffers from memory loss and has become largely non-verbal, but Miguel is very close to her. Miguel secretly idolizes famed musician Ernesto de la Cruz and practices his guitar skills using Ernesto's old films. On the Day of the Dead, Miguel accidentally damages the picture frame that holds a photo of Coco with her mother and her father (the latter's face torn off the picture) on the family ofrenda, discovering that a hidden section of the photograph shows his great-great-grandfather holding Ernesto's famous guitar. Miguel, concluding that Ernesto is his great-great-grandfather, ignores his family's objections and decides to enter the local talent show.
+</p>
+<p>
+    Breaking into Ernesto's mausoleum, Miguel takes his guitar to use in the show, but once he strums it, he becomes invisible to everyone in the village plaza. However, he can interact with his skeletal deceased relatives, who are visiting from the Land of the Dead for the holiday. Taking him back with them, they learn that Imelda cannot visit, since Miguel accidentally removed her photo from the ofrenda. Miguel discovers that he is cursed for stealing from the dead, and must return to the Land of the Living before sunrise, or he will become one of the dead; to do so, he must receive a blessing from a member of his family. Imelda offers Miguel a blessing on the condition of ending his dream of becoming a musician, but Miguel refuses and resolves to seek Ernesto's blessing instead.
+
+    He meets Héctor, who declares that he knows Ernesto, offering to help Miguel reach him in return for Miguel taking his photo back with him, so that he might visit his daughter before she forgets him, causing him to disappear completely. Héctor helps Miguel enter a talent competition to win entry to Ernesto's mansion, but Miguel's family tracks him down, forcing him to flee. Miguel sneaks into the mansion, where Ernesto welcomes him as his descendant, but Héctor confronts them, again imploring Miguel to take his photo to the Land of the Living. Ernesto and Héctor renew an argument from their partnership in life, and Miguel realizes that when Héctor decided to leave to return home to his family, Ernesto robbed him of his guitar and songs after poisoning him, passing them off as his own to become famous. To protect his legacy, Ernesto seizes the photo and has his security guards throw Miguel and Héctor into a cenote pit. There, Miguel discovers that Héctor is his actual great-great-grandfather, and Coco's father. Héctor only wanted to go to the Land of the Living so he could see Coco again.
+</p>
+
 <script>
     v = document.getElementById("myvideo");
     document.getElementById("goto20sec").addEventListener("click", function () {
